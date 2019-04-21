@@ -1,4 +1,4 @@
-# TactShoppingcart
+# ShoppingCart
 Shopping cart frontend development.
 
 
