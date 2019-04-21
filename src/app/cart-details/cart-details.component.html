@@ -1,0 +1,83 @@
+<div class="CardDetails-Container" *ngIf="service.cart.length>0; else Empty ">
+    <div class="GoToCart">
+        <h2 class="GoToCart-CartItemsHeading">Cart Items ({{service.cart.length}})</h2>
+        <div class="GoToCart-ProductDetails" *ngFor="let cartitem of service.cart" index as i>
+            <div>
+                <img class="ProductImage" [src]="'../' + cartitem.imagepath" />
+                <!-- <div>{{ cartitem.name }}</div> -->
+            </div>
+            <div class="Cardetails-Description ProductDescription">
+                <div>
+                    <b>{{cartitem.name}}:</b>
+                </div>
+                <hr> {{cartitem.description}}
+
+            </div>
+            <div class="productPricing">
+                <div class="productPricing-details">
+                    <div>
+                        <span>Price</span> x
+
+                        <span>Quantity</span> &#x27AF;
+
+                        <span>{{ cartitem.price }}</span> x
+
+                        <span>{{ cartitem.quantity }}</span> &#x27AF;
+
+                        <span>Rs.{{ cartitem.totalprice }}</span>
+                    </div>
+                </div>
+                <div class="productPricing-details">
+                    <span>Shipping and Handling</span> &#x27AF;
+                    <span>Rs.{{ service.shippingPrice(cartitem)}}</span>
+                </div>
+                <button class="button RemoveProductButton" (click)="removeProduct(cartitem.id)">Remove this product</button>
+            </div>
+        </div>
+    </div>
+    <div class="Cart-totalPrice">
+        <div class="Cart-totalPriceItem">
+            <span> Total Bag Price</span>
+            <span> {{ service.calculatePrice()}} Rs </span>
+        </div>
+        <div class="Cart-totalPriceItem">
+            <span> Total Shipping</span>
+            <span> {{ service.totalShippingPrice(service.cart) }} Rs </span>
+        </div>
+        <div *ngIf="service.discount();else elseShowOffer" class="Cart-totalPriceItem">
+            <span> Discount</span>
+            <span>(-) {{ service.discountAmount }} Rs </span>
+        </div>
+        <ng-template #elseShowOffer>
+            <div class="Cart-totalPriceItem">
+                <span>Shop for {{service.showOffer()}} Rs more to Get 20% Discount</span>
+            </div>
+        </ng-template>
+        <div class="FinalAmount Cart-totalPriceItem">
+            <span>
+					<b>Total Amount to be paid</b>
+				</span>
+            <span>
+					<b>{{ service.FinalPayingAmount()}} Rs</b>
+				</span>
+        </div>
+        <div class="DeliveryAddress">
+            <b>Delivery address:</b> #25, 31st main, 2nd cross, Btm 2nd Stage, Bengaluru 560076.
+            <button class="button">Change</button>
+        </div>
+        <div class="DeliveryAddress">
+            100% Safe & Secure Payment
+        </div>
+        <div class="Cart-Checkout">
+            <button class="button" routerLink="/shop-at-tact">Continue Shopping</button>
+            <button class="button">Proceed To Payments</button>
+        </div>
+    </div>
+</div>
+<ng-template #Empty>
+    <div style="text-align:center">
+        <h2 class="
+        ShopatTact">Cart Is Empty!</h2>
+        <button class="button" routerLink="/shop-at-tact">Go Back / Continue Shopping</button>
+    </div>
+    <ng-template>

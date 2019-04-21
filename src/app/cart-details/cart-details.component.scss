@@ -1,0 +1,71 @@
+@import "../app.component.scss";
+.CardDetails-Container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.RemoveProductButton {
+    margin-left: 20px;
+}
+
+.productPricing-details {
+    margin-left: 20px;
+}
+
+.productPricing {
+    font-family: sans-serif;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.Cart-totalPrice {
+    max-width: 25%;
+    font-family: sans-serif;
+    font-size: 12px;
+    border-radius: 45px;
+    background-color: $ProductBackground;
+    box-shadow: 0px 0px 10px 0px #b3b3b3;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 30px;
+    margin-top: 45px;
+    padding: 20px;
+}
+
+.Cardetails-Description {
+    width: 250px;
+    text-align: justify;
+    align-self: center;
+}
+
+.Cart-totalPriceItem {
+    margin-left: 20px;
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+}
+
+.FinalAmount {
+    border-left: 5px solid $ButtonHoverBackgroundColor;
+    border-top: 1px solid $ButtonHoverBackgroundColor;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.Cart-Checkout {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 70px;
+}
+
+.DeliveryAddress {
+    width: 64%;
+    margin-top: 20px;
+    border: 1px solid rgb(216, 216, 216);
+    padding: 20px;
+}

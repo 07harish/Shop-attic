@@ -1,0 +1,52 @@
+<div class="Productdetails-Container">
+    <div class="ShopatTact">
+        <{{ title }} />
+    </div>
+    <div class="Gotocart-StaticButton" *ngIf="service.cart.length>0">
+        <div>Total Items : {{service.cartTotalQuantity()}}
+            <button class="button" routerLink="/your-cart">Go To Cart</button>
+        </div>
+
+    </div>
+    <div class="ProductContainer">
+
+
+        <div class="ProductDetail" *ngFor="let product of products" index as i>
+            <span>
+        <img class="ProductImage" [src]="'../' + product.imagepath" />
+            <span><div class="ProductName">{{ product?.name }}</div>
+            <div class="ProductDescription">{{ product?.description }}</div></span>
+            </span>
+
+            <div class="Product-PriceButton-Container">
+                <div class="ProductPrice">Rs. {{ product?.price }}</div>
+                <div>
+                    <button class=" button IncrementButton " (click)="handleIncrement(product) ">
+          Add Item
+        </button><span class="ProductQuantityDisplay ">{{service.ItemQuantity(product.id)}}</span>
+                    <button [className]=" 'button DecrementButton-' + deactivateButton(product) " (click)="handleDecrement(product) ">
+          Remove
+        </button></div>
+            </div>
+
+            <!-- </ng-template> -->
+        </div>
+    </div>
+
+
+    <div class="GoToCart " *ngIf="service.cart.length>0? true : false">
+        <h2 class="GoToCart-CartItemsHeading">Cart Items</h2>
+        <div class="GoToCart-ProductDetails" *ngFor="let cartitem of service.cart" index as i>
+            <span>{{ cartitem.name }}</span>
+            <span>
+        &#x27AF;
+        <span>Price</span> x
+            <span>Quantity</span> &#x27AF;
+            <span>{{ cartitem.price }}</span> x
+            <span>{{ cartitem.quantity }}</span>
+            </span>
+        </div>
+        <div class="GoToCart-TotalPrice">Total Rs.{{ service.calculatePrice(service.cart) }}</div>
+    </div>
+    <button class="button" *ngIf="service.cart.length>0? true : false" routerLink="/your-cart">Go To Cart</button>
+</div>

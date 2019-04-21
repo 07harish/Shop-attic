@@ -1,0 +1,115 @@
+// font-size used throught App = 13px, 15px, 20px
+// BackGroundColor and used throught App has been listed below.
+// YThis file has been imported in all scss file this module.
+$ContainerBackground: rgb(252, 255, 248);
+$AppBackground: rgb(255, 255, 255);
+$ProductBackground: whitesmoke;
+$ButtonBackgroundColor: white;
+$ButtonHoverBackgroundColor: rgb(179, 179, 179);
+$ButtonHoverColor: rgb(255, 255, 255);
+$ButtonBoxshadow: 0px 0px 5px 0px rgb(204, 204, 204);
+.app {
+    background-color: $ButtonHoverBackgroundColor;
+    height: 100%;
+    ;
+}
+
+.LogoImage {
+    padding: 10px;
+    width: 100px;
+    margin-left: 70px;
+    margin-top: 20px;
+}
+
+.ShopatTact {
+    margin-left: 25px;
+    word-spacing: 3px;
+    letter-spacing: 2px;
+    padding-bottom: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+.LogoHeading {
+    font-size: 34px;
+    font-weight: 400;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+.GoToCart {
+    height: 100%;
+    max-width: 55%;
+    margin: 30px;
+    margin-top: 45px;
+    background-color: $ProductBackground;
+    border-radius: 45px;
+    font-size: 15px;
+    text-align: left;
+    width: 95%;
+    font-family: Arial, Helvetica, sans-serif;
+    word-spacing: 2px;
+    box-shadow: 0px 0px 10px 0px $ButtonHoverBackgroundColor;
+}
+
+.GoToCart-TotalPrice {
+    font-size: 15px;
+    // font-family: Arial, Helvetica, sans-serif;
+    margin: 10px;
+    text-align: center;
+    padding: 10px;
+}
+
+.GoToCart-ProductDetails {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-left: 4px solid $ButtonHoverBackgroundColor;
+    border-bottom: 1px solid rgb(228, 228, 228);
+    margin: 20px;
+    padding: 10px;
+}
+
+.GoToCart-CartItemsHeading {
+    text-align: center;
+    font-size: 20px;
+}
+
+.button {
+    color: black;
+    font-family: monospace;
+    background-color: $ButtonBackgroundColor;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border: none;
+    box-shadow: $ButtonBoxshadow;
+    &:hover {
+        background-color: $ButtonHoverBackgroundColor;
+        color: $ButtonHoverColor;
+    }
+}
+
+.ProductImage {
+    height: 248px;
+    width: 248px;
+    border: 2px solid black;
+}
+
+.ProductPrice {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    padding-right: 20px;
+}
+
+.ProductDescription {
+    word-spacing: 0px;
+    line-height: 1.4;
+    font-family: sans-serif;
+    text-align: justify;
+    padding: 15px;
+    margin-top: 5px;
+    font-size: 12px;
+}
