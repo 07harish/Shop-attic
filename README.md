@@ -2,7 +2,7 @@
 Shopping cart frontend development.
 
 
-All assets used are from Google, Goodreads and Tact.ai website.
+All assets/information used are from Google, Goodreads and Tact.ai website.
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
 ## Install Node modules
 Type `npm install` to install all the node modules available in the package.json file
