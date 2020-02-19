@@ -1,13 +1,13 @@
-import { Component, OnInit } from '@angular/core';
-import { ProductsService } from '../products.service';
+import { Component, OnInit } from "@angular/core";
+import { ProductsService } from "../products.service";
 
 @Component({
-  selector: 'app-product-details',
-  templateUrl: './product-details.component.html',
-  styleUrls: ['./product-details.component.scss']
+  selector: "app-product-details",
+  templateUrl: "./product-details.component.html",
+  styleUrls: ["./product-details.component.scss"]
 })
 export class ProductDetailsComponent implements OnInit {
-  title = 'Shop At Tact';
+  title = "#ShopAtBookAttic";
   public products: any = [];
   public service: any;
   constructor(private _productsService: ProductsService) {}
@@ -65,9 +65,9 @@ export class ProductDetailsComponent implements OnInit {
       this.service.cart[itemIndex] &&
       this.service.cart[itemIndex].quantity > 0
     ) {
-      return 'show';
+      return "show";
     } else {
-      return 'hide';
+      return "hide";
     }
   }
 

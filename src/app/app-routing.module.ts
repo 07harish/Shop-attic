@@ -1,25 +1,25 @@
-import { CartDetailsComponent } from './cart-details/cart-details.component';
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { ProductDetailsComponent } from './product-details/product-details.component';
+import { CartDetailsComponent } from "./cart-details/cart-details.component";
+import { NgModule } from "@angular/core";
+import { Routes, RouterModule } from "@angular/router";
+import { PageNotFoundComponent } from "./page-not-found/page-not-found.component";
+import { ProductDetailsComponent } from "./product-details/product-details.component";
 
 const routes: Routes = [
   {
-    path: '',
-    redirectTo: '/shop-at-tact',
-    pathMatch: 'full'
+    path: "",
+    redirectTo: "/shop-at-bookattic",
+    pathMatch: "full"
   },
   {
-    path: 'shop-at-tact',
+    path: "shop-at-bookattic",
     component: ProductDetailsComponent
   },
   {
-    path: 'your-cart',
+    path: "your-cart",
     component: CartDetailsComponent
   },
   {
-    path: '**',
+    path: "**",
     component: PageNotFoundComponent
   }
 ];
